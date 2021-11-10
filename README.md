@@ -43,6 +43,7 @@ Here are the summary of the 3 parts of this test/project:
 
 ## Usage:
 
+- Note: On Windows host, depending on how your Docker Engine is setup, you may need to use "localhost:5001" instead of the ip address of the container.
 - To invoke the search crawler, on your browser, go to: http://<ip_address>:5001/api/search/<searchkeyword>, for example:
   ```
   http://<ip_address>:5001/api/search/covid

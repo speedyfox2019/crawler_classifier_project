@@ -4,6 +4,8 @@ services:
     crawler_container2:
         image: crawler_image2
         build: .
+        ports:
+           - 5001:5001
         volumes:
            - './:/vol'        
         command: bash -c "cd /vol && dos2unix start_flask_dev.sh && ./start_flask_dev.sh && tail -f anything"
