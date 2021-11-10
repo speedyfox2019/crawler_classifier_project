@@ -1,4 +1,4 @@
-# crawler_classifier_project
+# Cancan's Crawler Classifier Project
 
 ## Summary
 
@@ -6,7 +6,8 @@ Here are the summary of the 3 parts of this test/project:
 1. Crawler
    - As suggested, I used Selenium, with Chrome Driver (you'll need a test Twitter account user nane, email, and password for this)
    - I also have a separate copy that implements the same with the Twitter API (APIs are usually more robust, and also uses tokens instead of user name and password)
-   - To ensure the selenium driver version compatibility with the installed browser, I decided to create a Docker container, with a Dockerfile that installs a specific Chrome browser and Driver version. I've used the selenium driver long enough to know it's finicky about the version compatibility :)
+   - To ensure the selenium driver version compatibility with the installed browser, I decided to create a Docker container, with a Dockerfile that installs a combination of Chrome browser and Driver version that works. I've used the selenium driver long enough to know it's finicky about the version compatibility :)
+   - It may takes ~10-15 mins the first time you run the project to setup the docker container and download all the dependencies
 2. ML:
    - I chose to use a simple VGG19 from Keras library as a pre-trained model and use it directtly to classify the images. 
    - Result/accuracy is so-so, for production, we'll need a better solution and maybe train our own model.

@@ -1,0 +1,10 @@
+version: '3.1'
+
+services:
+    crawler_container2:
+        image: crawler_image2
+        build: .
+        volumes:
+           - './:/vol'        
+        command: bash -c "cd /vol && ./start_flask_dev.sh && tail -f anything"
+           
