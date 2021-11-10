@@ -1,4 +1,4 @@
-# Cancan's Crawler Classifier Project
+# Crawler Classifier Project
 
 ## Summary
 
@@ -15,7 +15,7 @@ Here are the summary of the 3 parts of this test/project:
    - Result/accuracy is so-so, for production, we'll need a better solution and maybe train our own model.
 3. API:
    - I used Flask to implement the API
-   - The APIs are wide-open (no login required), but I included a simple JWT token-based authentication (commented out by default). Username and password are hardcoded just for illustration, normally it will be stored in database and used with some ORM.
+   - The APIs are wide-open (no login required), but I included a simple JWT token-based authentication (commented out by default). Username and password are hardcoded in the code just for illustration (but the token checking actually works as is), normally it will be stored in database and used with some ORM.
    - See Usage section below.   
 
 ## Installation/Running
