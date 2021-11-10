@@ -59,3 +59,18 @@ Here are the summary of the 3 parts of this test/project:
   ```
   curl -F 'data=@<path_to_your_local_image_file>' -H "x-access-token: <the_jwt_access_token>" http://<ip_address>:5001/api/upload
   ```
+
+## Project file structures:
+   - Top level project folder: 
+     - Dockerfile, docker-compose.yml, start_flask_dev.sh: for bootstrapping the app
+     - app.py: Flask entry point
+     - auth.py: some code for the JWT auth (if enabled. It's disabled by default)
+     - requirements.txt: list of python lib dependencies
+     - configs:
+       - development.py: dev config (for production there should be production.py)
+     - api:
+       - views.py: the Flask route for the APIs
+     - crawler:
+       - downloader.py: The crawler/image-downloader
+       - ml.py: the ML logic       
+     
