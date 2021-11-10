@@ -5,6 +5,8 @@
 Here are the summary of the 3 parts of this test/project:
 1. Crawler
    - As suggested, I used Selenium, with Chrome Driver (you'll need a test Twitter account user nane, email, and password for this)
+   - The crawler will try to login using the given account by simulating someone typing the username and password on the screen.
+   - Once logged in, the crawler will type in the search keyword, and grab the images.
    - I also have a separate copy that implements the same with the Twitter API (APIs are usually more robust, and also uses tokens instead of user name and password)
    - To ensure the selenium driver version compatibility with the installed browser, I decided to create a Docker container, with a Dockerfile that installs a combination of Chrome browser and Driver version that works. I've used the selenium driver long enough to know it's finicky about the version compatibility :)
    - It may takes ~10-15 mins the first time you run the project to setup the docker container and download all the dependencies
@@ -21,7 +23,11 @@ Here are the summary of the 3 parts of this test/project:
 1. Clone this project to a folder, then go into the folder.
 2. Edit the "configs/development.py" file and fill out the appropriate *test* Twitter credential. Highly recommended to use a test account, not your real/personal Twitter.
    ```
-   Fill out the TW_USER_NAME, TW_EMAIL, and TW_PASSWORD in the development.py
+   Fill out the following:
+       TW_USER_NAME
+       TW_EMAIL
+       TW_PASSWORD
+   in the development.py
    ```
 2. Make sure you have docker and docker-compose installed
 3. To start the program (you may need to do sudo):
