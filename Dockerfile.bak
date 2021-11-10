@@ -1,4 +1,0 @@
-FROM ubuntu:20.04
-
-RUN apt-get -y update && apt-get -y upgrade && apt install -y gdebi-core wget && wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && gdebi google-chrome-stable_current_amd64.deb
-

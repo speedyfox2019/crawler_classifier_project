@@ -6,5 +6,5 @@ services:
         build: .
         volumes:
            - './:/vol'        
-        command: bash -c "cd /vol && ./start_flask_dev.sh && tail -f anything"
+        command: bash -c "cd /vol && dos2unix start_flask_dev.sh && ./start_flask_dev.sh && tail -f anything"
            

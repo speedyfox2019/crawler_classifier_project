@@ -33,4 +33,7 @@ RUN pip install -r requirements.txt
 # Put Chromedriver into the PATH
 ENV PATH $CHROMEDRIVER_DIR:$PATH
 
+# Known to have problem when running Docker on Windows host
+RUN apt-get install -y dos2unix
+
 COPY app.py .
